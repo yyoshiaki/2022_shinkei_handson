@@ -27,7 +27,7 @@ ikra/ikra.sh design.csv human --protein-coding --threads 4 --align star --gencod
 
 ## Dockerを用いた環境構築
 
-### Pullの場合
+### Docker HubからPullの場合
 
 ```
 docker pull yyasumizu/2022shinkeihandson:latest
@@ -39,8 +39,16 @@ docker pull yyasumizu/2022shinkeihandson:latest
 docker build -t 2022shinkeihandson:latest .
 ```
 
-使用例 (現在のディレクトリをマウント)
+### 使用例 (現在のディレクトリをマウント)
+
+1. Docker HubからPullする場合
 
 ```
-docker run --rm -it 2022shinkeihandson:latest -v $PWD:/home  --workdir /home bash
+docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:latest bash
+```
+
+2. buildする場合
+
+```
+docker run --rm -it -v $PWD:/home --workdir /home 2022shinkeihandson:latest bash
 ```
