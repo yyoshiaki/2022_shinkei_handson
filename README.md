@@ -24,3 +24,23 @@ bash scripts.sh
 git clone https://github.com/yyoshiaki/ikra.git
 ikra/ikra.sh design.csv human --protein-coding --threads 4 --align star --gencode 37
 ```
+
+## Dockerを用いた環境構築
+
+### Pullの場合
+
+```
+docker pull yyasumizu/2022shinkeihandson:latest
+```
+
+### Buildする場合
+
+```
+docker build -t 2022shinkeihandson:latest .
+```
+
+使用例 (現在のディレクトリをマウント)
+
+```
+docker run --rm -it 2022shinkeihandson:latest -v $PWD:/home  --workdir /home bash
+```
