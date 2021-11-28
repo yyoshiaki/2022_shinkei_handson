@@ -52,3 +52,17 @@ docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:l
 ```
 docker run --rm -it -v $PWD:/home --workdir /home 2022shinkeihandson:latest bash
 ```
+
+### Permission Errorが出る場合（主にlinuxを使用する場合）
+
+ローカルからディレクトリのパーミッションを777に変更した後にdockerを起動
+
+```
+chmod 777 .
+docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:latest bash
+```
+
+## Q&A
+
+1. anacondaがインストールできない : macOSをアップデート。10.13以降必須。もしくはM1 Macの場合dockerを使用する。
+2. fasterq-dumpが動かない場合 : `vdb-config -i` は実行済みか確認。
