@@ -50,6 +50,7 @@ docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:l
 2. buildする場合
 
 ```
+docker build -t 2022shinkeihandson:latest .
 docker run --rm -it -v $PWD:/home --workdir /home 2022shinkeihandson:latest bash
 ```
 
