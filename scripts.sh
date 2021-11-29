@@ -16,10 +16,10 @@ wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_37/gencode.
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_37/gencode.v37.metadata.HGNC.gz
 
 # fasterq-dump
-# fasterq-dump SRR10738313 --split-files --threads 4 -p
-# fasterq-dump SRR10738318 --split-files --threads 4 -p
-# fasterq-dump SRR10738253 --split-files --threads 4 -p
-# fasterq-dump SRR10738254 --split-files --threads 4 -p
+fasterq-dump SRR10738313 --split-files --threads 4 -p
+fasterq-dump SRR10738318 --split-files --threads 4 -p
+fasterq-dump SRR10738253 --split-files --threads 4 -p
+fasterq-dump SRR10738254 --split-files --threads 4 -p
 
 # 圧縮 pigzでも
 gzip SRR*.fastq
