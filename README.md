@@ -9,6 +9,12 @@
 5. STAR (アラインメントの確認用。定量には使用しない。)
 6. samtools (アラインメントの確認用。定量には使用しない。)
 
+## clone
+
+```
+git clone https://github.com/yyoshiaki/2022_shinkei_handson.git
+```
+
 ## run all scripts
 
 ```
