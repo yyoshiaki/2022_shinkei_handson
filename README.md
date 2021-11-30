@@ -2,12 +2,18 @@
 
 ## 準備
 
+### Dockerを用いない場合
+
 1. sra-tools (fastq files ダウンロード)
 2. Trim Galore! (トリミング)
 3. salmon (遺伝子発現定量)
 4. R (library tximport, tidyverseをインストール)
 5. STAR (アラインメントの確認用。定量には使用しない。)
 6. samtools (アラインメントの確認用。定量には使用しない。)
+
+### Dockerを用いる場合
+
+[公式サイト](https://docs.docker.jp/desktop/index.html)を参照の上、Dockerをインストールしてください。
 
 ## clone
 
@@ -23,7 +29,7 @@ bash scripts.sh
 
 ## ikra
 
-上記の結果はikraを用いて再現できる
+上記の結果は[ikra](https://github.com/yyoshiaki/ikra)を用いて再現できる
 
 ```
 # install docker
@@ -69,7 +75,18 @@ chmod 777 .
 docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:latest bash
 ```
 
+## 下流解析
+
+[iDEP](http://bioinformatics.sdstate.edu/idep94/)を紹介します。
+
+
 ## Q&A
 
 1. anacondaがインストールできない : macOSをアップデート。10.13以降必須。もしくはM1 Macの場合dockerを使用する。
 2. fasterq-dumpが動かない場合 : `vdb-config -i` は実行済みか確認。
+3. WSLがうまく動かない : [公式サイト](https://docs.microsoft.com/ja-jp/windows/wsl/install)をよくご確認ください。特に、OSが前提条件を満たしているかなど慎重にご確認ください。
+
+## おすすめの参考書籍
+
+1. [RNA-Seqデータ解析　WETラボのための鉄板レシピ](https://www.yodosha.co.jp/yodobook/book/9784758122436/)
+2. [次世代シークエンサーDRY解析教本　改訂第2版](https://gakken-mesh.jp/book/detail/9784780909838.html)
