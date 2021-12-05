@@ -56,6 +56,8 @@ git clone https://github.com/yyoshiaki/ikra.git
 ikra/ikra.sh design.csv human --protein-coding --threads 4 --align star --gencode 37
 ```
 
+> Citation : Hiraoka Yu, Yamada Kohki, Ryuichiro Yamsasaki, YusukeKawasaki, Kitabatake Ryoko, Matsumoto Yasunari, Ishikawa Kaito, Umezu Yuto, Hirose Haruka, & Yoshiaki Yasumizu. (2021). yyoshiaki/ikra: ikra v2.0.1 (v2.0.1). Zenodo. https://doi.org/10.5281/zenodo.5541399
+
 ## Dockerを用いた環境構築
 
 ### Docker HubからPullの場合
