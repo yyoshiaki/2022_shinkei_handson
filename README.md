@@ -32,7 +32,7 @@ Rscript -e 'install.packages("tidyverse", dependencies=TRUE, repos = "https://cr
 
 ### Dockerを用いる場合
 
-[公式サイト](https://docs.docker.jp/desktop/index.html)を参照の上、Dockerをインストールしてください。
+[Docker 公式サイト](https://docs.docker.jp/desktop/index.html)を参照の上、Dockerをインストールしてください。
 
 ## clone
 
@@ -104,6 +104,7 @@ docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:l
 1. anacondaがインストールできない : macOSをアップデート。10.13以降必須。もしくはM1 Macの場合dockerを使用する。
 2. fasterq-dumpが動かない場合 : `vdb-config -i` は実行済みか確認。
 3. WSLがうまく動かない : [公式サイト](https://docs.microsoft.com/ja-jp/windows/wsl/install)をよくご確認ください。特に、OSが前提条件を満たしているかなど慎重にご確認ください。
+4. conda installがコンフリクトする。 : conda createで新しく環境を作るか、各ツールの公式サイトのインストール手順を参照してください。
 
 ## おすすめの参考書籍
 
