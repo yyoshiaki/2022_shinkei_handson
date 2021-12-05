@@ -4,6 +4,8 @@
 
 ### Dockerを用いない場合
 
+以下のツールをインストール。
+
 1. sra-tools (fastq files ダウンロード)
 2. Trim Galore! (トリミング)
 3. salmon (遺伝子発現定量)
@@ -11,7 +13,10 @@
 5. STAR (アラインメントの確認用。定量には使用しない。)
 6. samtools (アラインメントの確認用。定量には使用しない。)
 
-例 
+#### anacondaを用いた例 
+
+1. [anaconda 公式サイト](https://www.anaconda.com/products/individual)より適切なインストーラーをダウンロードし、インストール。
+2. conda等を用いてツールをインストール。
 
 ```
 conda install -c bioconda -y sra-tools -y
