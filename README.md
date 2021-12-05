@@ -11,6 +11,20 @@
 5. STAR (アラインメントの確認用。定量には使用しない。)
 6. samtools (アラインメントの確認用。定量には使用しない。)
 
+例 
+
+```
+conda install -c bioconda -y sra-tools -y
+conda install -c bioconda -y trim-galore -y
+conda install -c bioconda salmon==1.6.0 -y
+conda install -c bioconda samtools -y
+conda install -c bioconda star -y
+# R
+conda install -c conda-forge r-base bioconductor-tximport==1.22.0 -y
+
+Rscript -e 'install.packages("tidyverse", dependencies=TRUE, repos = "https://cran.ism.ac.jp/")'
+```
+
 ### Dockerを用いる場合
 
 [公式サイト](https://docs.docker.jp/desktop/index.html)を参照の上、Dockerをインストールしてください。
