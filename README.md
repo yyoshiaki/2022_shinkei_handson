@@ -107,6 +107,7 @@ docker run --rm -it -v $PWD:/home --workdir /home yyasumizu/2022shinkeihandson:l
 2. fasterq-dumpが動かない場合 : `vdb-config -i` は実行済みか確認。
 3. WSLがうまく動かない : [公式サイト](https://docs.microsoft.com/ja-jp/windows/wsl/install)をよくご確認ください。特に、OSが前提条件を満たしているかなど慎重にご確認ください。
 4. conda installがコンフリクトする。 : conda createで新しく環境を作るか、各ツールの公式サイトのインストール手順を参照してください。
+5. Mac docker環境で処理が止まる。 : Dockerのリソースを確認、メモリへの割付を増加する。[https://docs.docker.com/desktop/mac/#resources](https://docs.docker.com/desktop/mac/#resources)
 
 ## おすすめの参考書籍
 
