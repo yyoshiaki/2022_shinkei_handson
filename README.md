@@ -21,7 +21,7 @@
 ```
 conda install -c bioconda sra-tools -y
 conda install -c bioconda trim-galore -y
-conda install -c bioconda salmon==1.6.0 -y∫
+conda install -c bioconda salmon==1.6.0 -y
 conda install -c bioconda samtools -y
 conda install -c bioconda star -y
 # R
