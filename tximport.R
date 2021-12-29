@@ -7,14 +7,14 @@ library(stringr)
 # Rscript tximport_R.R gencode.vM19.metadata.MGI.gz Illumina_PE_SRR.csv output.tsv
 
 SRRs <- c("SRR10738313", "SRR10738318", "SRR10738253", "SRR10738254")
-
+ids <- c("day2_1", "day2_2", "day77_1", "day77_2")
 tx2knownGene <- read_delim("gencode.v37.metadata.HGNC.gz", '\t', col_names = c('TXNAME', 'GENEID'))
 
 # print(paste(c("salmon_output_") , split.vec, c("/quant.sf"), sep=''))
 
 # files <- paste(c("salmon_output_") , exp.table[,2], c("/quant.sf"), sep='')
 files <- paste(c("salmon_output_") , SRRs, c("/quant.sf"), sep='')
-names(files) <- SRRs
+names(files) <- ids
 
 print(files)
 
