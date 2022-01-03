@@ -17,17 +17,25 @@ wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_37/gencode.
 
 # fasterq-dump
 prefetch SRR10738313
-prefetch SRR10738318
-prefetch SRR10738253
-prefetch SRR10738254
-
 fasterq-dump SRR10738313 --split-files --threads 4 -p
-fasterq-dump SRR10738318 --split-files --threads 4 -p
-fasterq-dump SRR10738253 --split-files --threads 4 -p
-fasterq-dump SRR10738254 --split-files --threads 4 -p
+pigz SRR10738313_*.fastq
+rm -r SRR10738313
 
-# 圧縮 pigzでも
-pigz SRR*.fastq
+prefetch SRR10738318
+fasterq-dump SRR10738318 --split-files --threads 4 -p
+pigz SRR10738318_*.fastq
+rm -r SRR10738318
+
+
+prefetch SRR10738253
+fasterq-dump SRR10738253 --split-files --threads 4 -p
+pigz SRR10738253_*.fastq
+rm -r SRR10738253
+
+prefetch SRR10738254
+fasterq-dump SRR10738254 --split-files --threads 4 -p
+pigz SRR10738254_*.fastq
+rm -r SRR10738254
 
 # trim-galore
 trim_galore --cores 4 --paired SRR10738313_1.fastq.gz SRR10738313_2.fastq.gz
