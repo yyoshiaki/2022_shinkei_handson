@@ -27,7 +27,7 @@ fasterq-dump SRR10738253 --split-files --threads 4 -p
 fasterq-dump SRR10738254 --split-files --threads 4 -p
 
 # 圧縮 pigzでも
-gzip SRR*.fastq
+pigz SRR*.fastq
 
 # trim-galore
 trim_galore --cores 4 --paired SRR10738313_1.fastq.gz SRR10738313_2.fastq.gz
